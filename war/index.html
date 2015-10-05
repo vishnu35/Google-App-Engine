@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Hello App Engine</title>
+</head>
+
+<body>
+	<h1>CS553 ASSIGNMENT 3 (vkrish11,caakula,vaniredd)</h1>
+
+	<!-- 	<table> -->
+	<!-- 		<tr> -->
+	<!-- 			<td colspan="2" style="font-weight: bold;">Available Servlets:</td> -->
+	<!-- 		</tr> -->
+	<!-- 		<tr> -->
+	<!-- 			<td><a href="gae">GAE</a></td> -->
+	<!-- 		</tr> -->
+	<!-- 	</table> -->
+	<h4>Create File</h4>
+	<form action="/FileCreate" method="post">
+
+		<table>
+			<tr>
+				<td>File Name</td>
+				<td><input type="text" name="createfilename" /></td>
+			</tr>
+			<tr>
+				<td>File Description</td>
+				<td><textarea name="createfiledescription" rows="3" cols="60"></textarea></td>
+			</tr>
+			<tr>
+				<tb></tb>
+				<td><input type="submit" value="Create File" /></td>
+			</tr>
+		</table>
+	</form>
+	<br>
+	<hr>
+	<br>
+	<h4>Upload File</h4>
+	<form action="/FileUpload" method="post" enctype="multipart/form-data">
+
+		<table>
+			<tr>
+				<td><input type="file" name="uploadfilename" multiple /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Upload File" /></td>
+			</tr>
+		</table>
+	</form>
+	<br>
+	<hr>
+	<br>
+	<h4>View Files</h4>
+	<button onclick="location.href='/FileList'">View List Of Files</button>
+	<br>
+	<hr>
+	<br>
+	<h4>Check Files</h4>
+	<form action="/FileFind" method="post">
+		<table>
+			<tr>
+				<td>File Name</td>
+				<td><input type="text" name="findfilename" /></td>
+			</tr>
+			<tr>
+				<tb></tb>
+				<td><input type="submit" value="Check File" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
